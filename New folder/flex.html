@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent {
+            width: 500px;
+            height: 500px;
+            padding-left: 60px;
+            padding-right: 60px;
+            background-color: rebeccapurple;
+            display: flex;
+            flex-direction: column;
+            /* can chinh theo chieu ngang, cach nhau 2 dau space... */
+            justify-content: space-between;
+            /* can chinh theo chieu doc */
+            align-items: center; 
+
+        }
+        .child1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .child2{
+            
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+        }
+        .child3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <didv class="child1">1</didv>
+        <didv class="child2">2</didv>
+        <didv class="child3">3</didv>
+    </div>
+    <!-- khai bao flex o the parent,
+    can chia flex cung o parent -->
+</body>
+
+</html>
