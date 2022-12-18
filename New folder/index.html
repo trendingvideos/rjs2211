@@ -1,14 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatiable" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Learn HTML</title>
-    </head>
-    <body>
-        đây là home page
-        <p> doan van 1</p>
-        <p> skflsfjlsjflsfj sdfjsfjslfdfdgdfgklkjfggggggg fgdgdg dfdgdgdg dfdgdgdg dgfdgg s d d đ </p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .feature{
+        width: 552px;
+        height: 182px;
+        color: #252B42;
+        /* background-color:blanchedalmond; */
+        display: flex;
+        flex-direction: column;
+            /* can chinh theo chieu ngang, cach nhau 2 dau space... */
+        justify-content: space-between;
+            /* can chinh theo chieu doc */
+        align-items: center;
+    }
+    .root{
+        width: 1777px;
+        height: 1362px;
+        /* padding-left: 60px;
+        padding-right: 60px; */
+        /* background-color: rebeccapurple; */
+        display: flex;
+        flex-direction: column;
+            /* can chinh theo chieu ngang, cach nhau 2 dau space... */
+        justify-content: space-between;
+            /* can chinh theo chieu doc */
+        align-items: center;
+    }
+
+    h3{
+        color:#374754;
+    }
+    .parent1{
+        width: 865px;
+        height: 500px;
+        /* padding-left: 60px;
+        padding-right: 60px; */
+        /* background-color: rebeccapurple; */
+        display: flex;
+        flex-direction: row;
+            /* can chinh theo chieu ngang, cach nhau 2 dau space... */
+        justify-content: space-between;
+            /* can chinh theo chieu doc */
+        align-items: flex-start;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+            /* can chinh theo chieu ngang, cach nhau 2 dau space... */
+        justify-content: space-between;
+            /* can chinh theo chieu doc */
+        align-items: flex-start;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+            /* can chinh theo chieu ngang, cach nhau 2 dau space... */
+        justify-content: space-between;
+            /* can chinh theo chieu doc */
+        align-items: center;
+    }
+
+    .child1{
+        color: #374754;
+        width: 255px;
+        height: 257px;
+    }
+    .child2{
+        color: #374754;
+        width: 255px;
+        height: 257px;
+    }
+    .child3{
+        color: #374754;
+        width: 255px;
+        height: 257px;
+    }
+    .smalltext{
+        color: #374754;
+        size: 18px;
+    }
+
+</style>
+</head>
+<br>
+    <div class="root">
+        <div class="feature">
+            <h2>Feature</h2>
+            <h4>Most calendars are designed for teams. </br>
+                Slate is designed for freelancers</h4>
+        </div>
+        <div class="parent1">
+            <div class="child1">
+                <img
+                width="61"
+                height="61"
+                src="./img/mdi1.png"
+                alt="this is a imge online"/>
+                <h3>OpenType features 
+                    Variable fonts</h3>
+                <div class="smalltext">Slate helps you see how 
+                    many more days you need 
+                    to work to reach your 
+                    financial goal.</div>
+            </div>
+            <div class="child2">
+                <img
+                width="61"
+                height="61"
+                src="./img/mdi1.png"
+                alt="this is a imge online"/>
+                <h3>Design with real data</h3>
+                <div class="smalltext">Slate helps you see how 
+                    many more days you need 
+                    to work to reach your 
+                    financial goal.</div>
+            </div>
+            <div class="child3">
+                <img
+                width="61"
+                height="61"
+                src="./img/mdi1.png"
+                alt="this is a imge online"/>
+                <h3>Fastest way to 
+                    take action</h3>
+                <div class="smalltext">Slate helps you see how 
+                    many more days you need 
+                    to work to reach your 
+                    financial goal.</div>
+
+            </div>
+        </div>
+        <div>
+            <img
+                width="1177"
+                height="658"
+                src="./img/videoscreen.png"
+                alt="this is a imge online"/>
+        </div>
+    </div>
+
+</body>
 </html>
