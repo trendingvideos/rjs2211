@@ -1,0 +1,16 @@
+{
+  "name": "bai11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "btvn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pham Thi Hong",
+  "license": "ISC",
+  "dependencies": {
+    "format-money-js": "^1.6.2",
+    "readline-sync": "^1.4.10",
+    "shortid": "^2.2.16"
+  }
+}
