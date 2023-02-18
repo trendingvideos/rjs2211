@@ -54,7 +54,8 @@ var function2_add = function () {
     console.log('ten hs bi trung lap ');
   }
 }
-var function3_delete = function (std) {
+var function3_delete = function () {
+  let std = readlineSync.question('nhap ten sv muon delete? ');
   const arrDeleted = arrStudent.filter(function (item, index) {
     return item.name != std;
   });
@@ -66,9 +67,9 @@ var function3_delete = function (std) {
   update();
 
 }
-var function4_edit = function (x) {
-  // console.log('Edit ', arrStudent);
-  index = findStudent(x);
+var function4_edit = function () {
+  let std = readlineSync.question('nhap ten sv muon edit? ');
+  index = findStudent(std);
   if (index >= 0) {
     age1 = readlineSync.question('age? ');
     sex1 = readlineSync.question('sex? [1] male [2] female? ');
@@ -99,20 +100,27 @@ var findStudent = function (x) {
   return -1;
 }
 
-var function5_find = function (name) {
-  const index = findStudent(name);
+var function5_find = function () {
+  let std = readlineSync.question('nhap ten sv muon tim? ');
+  const index = findStudent(std);
   if (index >= 0) {
     console.log('thong tin hs: ', arrStudent[index]);
   } else {
-    console.log('khong ton tai hs co ten: ', name);
+    console.log('khong ton tai hs co ten: ', std);
   }
 
 }
 var function6_sortByName = function () {
-  const arrSortByName = arrStudent.sort((a, b) => a.locale);
+  const newSortName = arrStudent.sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+  console.log(newSortName);
 }
 var function7_sortByAge = function () {
-
+  const newSort = arrStudent.sort((a, b) => {
+    return a.age - b.age;
+  });
+  console.log(newSort);
 }
 var function8_exit = function () {
 
@@ -135,16 +143,13 @@ while (true) {
       function2_add();
       break;
     case "3":
-      let name3 = readlineSync.question('nhap ten sv muon delete? ');
-      function3_delete(name3);
+      function3_delete();
       break;
     case "4":
-      let name4 = readlineSync.question('nhap ten sv muon edit? ');
-      function4_edit(name4);
+      function4_edit();
       break;
     case "5":
-      let name5 = readlineSync.question('nhap ten sv muon tim? ');
-      function5_find(name5);
+      function5_find();
       break;
     case "6":
       function6_sortByName();
