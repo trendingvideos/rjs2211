@@ -3,18 +3,25 @@ var fs = require('fs');
 
 var arrStudent = [];
 var showMenu = function () {
-  console.log('    Student Managerment  \n ====================');
+  arrStudent = JSON.parse(readstd());
+  console.log('    Student Managerment  \n ================================');
   console.log('1.Show all students');
   console.log('2.Create student and return Menu');
   console.log('3.Delete student');
-  console.log('4.Edit studnet');
+  console.log('4.Edit student');
   console.log('5.Find student by name');
   console.log('6.Sort student by name ascending');
   console.log('7.Sort student by age ascending');
   console.log('8.Exit');
 
 }
-let studentFile = fs.readFileSync('./student.txt')
+// let studentFile = fs.readFileSync('./student.txt')
+var readstd = function () {
+  const data = fs.readFileSync('./student.txt', { encoding: 'utf8' });
+  // console.log('show all student....\n', JSON.parse(data));
+  return data;
+
+}
 var update = function () {
   fs.writeFileSync("./student.txt", JSON.stringify(arrStudent), (err) => {
     if (err)
@@ -24,9 +31,10 @@ var update = function () {
     }
   });
 }
+
 function function1_showAll() {
-  const data = fs.readFileSync('./student.txt', { encoding: 'utf8' });
-  console.log('show all student....\n', data);
+  const data = readstd();
+  console.log('show all student....\n', JSON.parse(data));
 }
 var function2_add = function () {
   let name1 = readlineSync.question('name?');
@@ -129,12 +137,7 @@ var function8_exit = function () {
 
 while (true) {
   showMenu();
-  const chose = readlineSync.question('your chose?');
-  let data = {
-    name: '',
-    age: 0,
-    sex: '',
-  };
+  const chose = readlineSync.question('your chose? ');
   switch (chose) {
     case "1":
       function1_showAll();
