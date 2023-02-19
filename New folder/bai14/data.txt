@@ -1,0 +1,1 @@
+[{"id":"hPRceAKPf","name":"hong","age":"22","sex":"male","diemIn":"22","diemAv":"7"},{"id":"18LBM-pFi","name":"hieu","age":"30","sex":"female","diemIn":"25","diemAv":"8"},{"id":"Eq6f6S2J0","name":"an","age":"18","sex":"male","diemIn":"18","diemAv":"6"}]
